@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滑块验证码</title>
+    <link rel="stylesheet" href="./lib/style.css">
+    <script src="./lib/img_demo.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body > div{
+            margin:0 auto;
+            margin-top: 200px
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            let img = new ImgCaptcha({
+            el: document.body,
+            imgUrl: './lib/ver-2.png',
+            width: 280,
+            height: 126,
+            success: function() {
+                alert('成功')
+            }
+        })
+        }
+    </script>
+</body>
+</html>
